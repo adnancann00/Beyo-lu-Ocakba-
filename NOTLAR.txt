@@ -1,12 +1,18 @@
 Beyoğlu Ocakbaşı demo sitesi, yayın notları
 
-1) Alan adı varsayımı: https://beyoglu-ocakbasi.netlify.app
+1) Yayın adresi (Vercel, GitHub main dalından otomatik): https://beyoglu-ocakbasi.vercel.app
    (beyogluocakbasi.com başka bir restorana, kenanusta.com.tr'ye yönleniyor; kullanılmadı.)
    Değiştirmek için:
-   grep -rl 'beyoglu-ocakbasi.netlify.app' . | xargs sed -i '' 's#https://beyoglu-ocakbasi.netlify.app#https://YENI-ADRES#g'
+   grep -rl 'beyoglu-ocakbasi.netlify.app' . | xargs sed -i '' 's#https://beyoglu-ocakbasi.vercel.app#https://YENI-ADRES#g'
 
 2) Demo modu: index.html içindeki <meta name="robots" content="noindex, nofollow"> satırı
    işletme onay verene kadar kalsın. Onaydan sonra sil, Search Console'a sitemap.xml gönder.
 
 3) Çalışma saatleri Google İşletme Profili'nden alındı (2026-11-15): Pazar-Perşembe 12:00-24:00, Cuma-Cumartesi 12:00-01:00.
    Teyit edilecek: e-posta, kuruluş yılı (1990 / 1971).
+
+4) Rezervasyon formu Supabase'e yazar (Özcan Usta ile aynı proje gkbdxrcdknsvtowzknmn, ayrı tablo beyoglu_rezervasyonlar).
+   Tablo ve güvenlik kuralları: supabase/migrations/20261115120000_beyoglu_rezervasyonlar.sql (SQL Editor'da elle çalıştırılır).
+   Talepler: Supabase paneli > Table Editor > beyoglu_rezervasyonlar. "durum" sütunu: yeni / onaylandi / iptal.
+   Yeni talep bildirimi (e-posta/SMS) YOK; işletmeye ulaşması için satıştan sonra kurulmalı.
+

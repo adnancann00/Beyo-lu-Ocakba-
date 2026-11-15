@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /tesekkurler.html
 
-Sitemap: https://beyoglu-ocakbasi.netlify.app/sitemap.xml
+Sitemap: https://beyoglu-ocakbasi.vercel.app/sitemap.xml

@@ -7,16 +7,16 @@
 <meta name="description" content="Taksim, Bekar Sokak No:20'de 1990'dan beri ocakbaşı. Adana kebap, kuzu şiş, mezeler ve Cumartesi şarkılı geceler. Rezervasyon: 0212 249 30 30.">
 <!-- DEMO: işletme onaylayınca bu satırı sil, robots.txt hazır -->
 <meta name="robots" content="noindex, nofollow">
-<!-- ALAN ADI VARSAYIMI: https://beyoglu-ocakbasi.netlify.app (gerçek alan adı gelince hepsini değiştir, bkz. NOTLAR.txt) -->
-<link rel="canonical" href="https://beyoglu-ocakbasi.netlify.app/">
+<!-- YAYIN ADRESİ: https://beyoglu-ocakbasi.vercel.app (gerçek alan adı gelince hepsini değiştir, bkz. NOTLAR.txt) -->
+<link rel="canonical" href="https://beyoglu-ocakbasi.vercel.app/">
 <meta name="theme-color" content="#3f0f16">
 <meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="Beyoğlu Ocakbaşı">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="Beyoğlu Ocakbaşı | 1990'dan Beri Bekar Sokak'ta">
 <meta property="og:description" content="Taksim'de ocakbaşı: Adana kebap, kuzu şiş, mezeler. Rezervasyon: 0212 249 30 30.">
-<meta property="og:url" content="https://beyoglu-ocakbasi.netlify.app/">
-<meta property="og:image" content="https://beyoglu-ocakbasi.netlify.app/img/og.jpg">
+<meta property="og:url" content="https://beyoglu-ocakbasi.vercel.app/">
+<meta property="og:image" content="https://beyoglu-ocakbasi.vercel.app/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Beyoğlu Ocakbaşı'nın bordo tenteli girişi, Bekar Sokak">
@@ -25,10 +25,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "@id": "https://beyoglu-ocakbasi.netlify.app/#restoran",
+  "@id": "https://beyoglu-ocakbasi.vercel.app/#restoran",
   "name": "Beyoğlu Ocakbaşı",
-  "url": "https://beyoglu-ocakbasi.netlify.app/",
-  "image": ["https://beyoglu-ocakbasi.netlify.app/img/og.jpg", "https://beyoglu-ocakbasi.netlify.app/img/adana.jpg"],
+  "url": "https://beyoglu-ocakbasi.vercel.app/",
+  "image": ["https://beyoglu-ocakbasi.vercel.app/img/og.jpg", "https://beyoglu-ocakbasi.vercel.app/img/adana.jpg"],
   "telephone": "+90 212 249 30 30",
   "foundingDate": "1990",
   "servesCuisine": ["Türk mutfağı", "Ocakbaşı", "Kebap", "Meze"],
@@ -282,8 +282,7 @@
       </dl>
     </div>
 
-    <form class="form" id="rezervasyon" name="rezervasyon" method="POST" action="/tesekkurler.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-      <input type="hidden" name="form-name" value="rezervasyon">
+    <form class="form" id="rezervasyon" name="rezervasyon" novalidate>
       <p class="hp"><label>Bunu boş bırakın <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="alan">
         <label for="f-ad">Adınız</label>
@@ -300,7 +299,7 @@
         </div>
         <div class="alan">
           <label for="f-saat">Saat</label>
-          <input id="f-saat" name="saat" type="time" step="900" required>
+          <input id="f-saat" name="saat" type="time" step="900" min="12:00" max="23:30" required>
         </div>
       </div>
       <div class="alan">

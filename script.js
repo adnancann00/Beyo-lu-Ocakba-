@@ -1,4 +1,4 @@
-/* Beyoğlu Ocakbaşı: menü, üst çubuk, mobil arama çubuğu, rezervasyon formu (Netlify Forms) */
+/* Beyoğlu Ocakbaşı: menü, üst çubuk, mobil arama çubuğu, rezervasyon formu (Supabase) */
 (function () {
   var ust = document.querySelector('[data-ust]');
   var menuDugme = document.querySelector('[data-menu]');
@@ -7,6 +7,12 @@
   var acilis = document.querySelector('.acilis');
   var form = document.getElementById('rezervasyon');
   var TEL = '0212 249 30 30';
+  // Rezervasyonlar Supabase'e yazılır. Anahtar herkese açık (publishable) anahtardır;
+  // tablo yalnızca ekleme izni verir, okuma/silme yok
+  // (bkz. supabase/migrations/20261115120000_beyoglu_rezervasyonlar.sql).
+  var SUPABASE_URL = 'https://gkbdxrcdknsvtowzknmn.supabase.co';
+  var SUPABASE_KEY = 'sb_publishable_tWavH4T9LPPrTAZnw8FkMQ_ij_uc0ML';
+  var TABLO = 'beyoglu_rezervasyonlar';
 
   // Yıl
   var yil = document.querySelector('[data-yil]');
@@ -67,6 +73,7 @@
     if (!tarih.value) return hataVer(tarih, 'Bir tarih seçin.');
     if (tarih.value < tarih.min) return hataVer(tarih, 'Geçmiş bir tarih seçilemez.');
     if (!saat.value) return hataVer(saat, 'Bir saat seçin.');
+    if (saat.value < '12:00' || saat.value > '23:30') return hataVer(saat, 'Rezervasyon saatleri 12:00 - 23:30 arası.');
     if (!kisi.value) return hataVer(kisi, 'Kişi sayısını seçin.');
     return true;
   }
@@ -77,10 +84,17 @@
     var dugme = form.querySelector('button[type="submit"]');
     dugme.disabled = true;
     goster('Gönderiliyor...');
-    fetch('/', {
+    fetch(SUPABASE_URL + '/rest/v1/' + TABLO, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
+      headers: { 'apikey': SUPABASE_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify({
+        ad: form.ad.value.trim(),
+        telefon: form.telefon.value.trim(),
+        tarih: tarih.value,
+        saat: form.saat.value,
+        kisi: form.kisi.value,
+        notlar: form.not.value.trim() || null
+      })
     }).then(function (y) {
       if (!y.ok) throw new Error(y.status);
       form.reset();
