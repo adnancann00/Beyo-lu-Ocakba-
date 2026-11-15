@@ -1,0 +1,12 @@
+Beyoğlu Ocakbaşı demo sitesi, yayın notları
+
+1) Alan adı varsayımı: https://beyoglu-ocakbasi.netlify.app
+   (beyogluocakbasi.com başka bir restorana, kenanusta.com.tr'ye yönleniyor; kullanılmadı.)
+   Değiştirmek için:
+   grep -rl 'beyoglu-ocakbasi.netlify.app' . | xargs sed -i '' 's#https://beyoglu-ocakbasi.netlify.app#https://YENI-ADRES#g'
+
+2) Demo modu: index.html içindeki <meta name="robots" content="noindex, nofollow"> satırı
+   işletme onay verene kadar kalsın. Onaydan sonra sil, Search Console'a sitemap.xml gönder.
+
+3) Çalışma saatleri Google İşletme Profili'nden alındı (2026-11-15): Pazar-Perşembe 12:00-24:00, Cuma-Cumartesi 12:00-01:00.
+   Teyit edilecek: e-posta, kuruluş yılı (1990 / 1971).

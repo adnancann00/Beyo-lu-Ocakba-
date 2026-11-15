@@ -1,0 +1,25 @@
+Tüm fotoğraflar işletmenin kendi Instagram hesabından (@beyogluocakbasi), Apify instagram-scraper ile 2026-11-15'te alındı.
+Kullanım izni işletmeden alınmadı; satış görüşmesinde izin ve yüksek çözünürlüklü asıllar istenmeli.
+Yazı/logo katmanları kırpılarak çıkarıldı.
+
+hero.jpg      Google İşletme Profili, işletmenin kendi yüklediği cephe fotoğrafı (1200x1600, sağ kenar kırpıldı)
+og.jpg        aynı cephe fotoğrafından 1200x630 kesit
+usta.jpg      instagram.com/p/DfQEHulIDtF  (ocak ustası)
+sisler.jpg    instagram.com/p/CGMy6EhlW19  (Adana şişleri, 554px, düşük)
+adana.jpg     instagram.com/p/DfQD8RuoYS_
+beyti.jpg     instagram.com/p/DfQEKTioHyP
+kozden.jpg    instagram.com/p/DfQEGt-ofVW
+
+Galeri (2026-11-15, Google İşletme Profili, işletmenin kendi yüklemeleri, en yüksek çözünürlük):
+g-kebap.jpg   yoğurtlu kebap tabağı (2225px asıl)
+g-salon.jpg   ana salon (1160px)
+g-salon-2.jpg salon (1160px)
+g-giris.jpg   akşamüstü giriş (1259x1745)
+g-tabak.jpg   karışık kebap tabağı (2361x4192 asıl, geniş kesit)
+g-adana.jpg   instagram.com/p/DfQF9b-u3Wg (profesyonel çekim, yazısı kırpıldı)
+
+Hizmet kartları (2026-11-15, Google İşletme Profili, işletmenin kendi yüklemeleri):
+k-ocak.jpg       karışık şiş tahtası (1917x3466 asıl)
+k-meze.jpg       meze sofrası, yukarıdan (3024x4032 asıl)
+k-cumartesi.jpg  instagram.com/p/DUDAOADiHfJ "Her Cumartesi şarkıları" videosundan kare (640px, logo izi kırpıldı)
+k-dogumgunu.jpg  doğum günü tabağı (1080x846 asıl, en zayıf kare)
